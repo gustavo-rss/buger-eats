@@ -1,0 +1,18 @@
+{
+  "name": "buger-eats",
+  "version": "1.0.0",
+  "description": "Buger eats application acceptance test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "keywords": [
+    "qa",
+    "cypress"
+  ],
+  "author": "Gustavo Ramos",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.3.1"
+  }
+}
