@@ -1,0 +1,34 @@
+{
+  "signup": {
+    "name": "Gustavo Ramos",
+    "cpf": "09909911109",
+    "email": "gustavo@hotmail.com",
+    "whatsapp": "11999999999",
+    "address": {
+      "postalcode": "04534011",
+      "street": "Rua Joaquim Floriano",
+      "addressNumber": "1000",
+      "complement": "Ap 142",
+      "district": "Itaim Bibi",
+      "city": "São Paulo/SP"
+    },
+    "deliveryMethod": "Moto",
+    "cnh": "images/cnh-digital.jpg"
+  },
+  "inv_cpf": {
+    "name": "John Doe",
+    "cpf": "09909911ABC",
+    "email": "john@hotmail.com",
+    "whatsapp": "11999999999",
+    "address": {
+      "postalcode": "04534011",
+      "street": "Rua Joaquim Floriano",
+      "addressNumber": "1000",
+      "complement": "Ap 142",
+      "district": "Itaim Bibi",
+      "city": "São Paulo/SP"
+    },
+    "deliveryMethod": "Moto",
+    "cnh": "images/cnh-digital.jpg"
+  }
+}

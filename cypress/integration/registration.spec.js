@@ -1,28 +1,14 @@
-import SignupPage from "../pages/SignupPage";
+import signup from "../pages/SignupPage";
 
 describe("Registration", () => {
-  it("User must become a deliveryman", () => {
-    var deliveryman = {
-      name: "Gustavo Ramos",
-      cpf: "09909911109",
-      email: "gustavo@hotmail.com",
-      whatsapp: "11999999999",
-      address: {
-        postalcode: "04534011",
-        street: "Rua Joaquim Floriano",
-        addressNumber: "1000",
-        complement: "Ap 142",
-        district: "Itaim Bibi",
-        city: "São Paulo/SP",
-      },
-      deliveryMethod: "Moto",
-      cnh: "images/cnh-digital.jpg",
-    };
-
-    var signup = new SignupPage();
-
+  beforeEach(function () {
+    cy.fixture("deliveryman").then((d) => {
+      this.deliveryman = d;
+    });
+  });
+  it("User must become a deliveryman", function () {
     signup.go();
-    signup.fillForm(deliveryman);
+    signup.fillForm(this.deliveryman.signup);
     signup.submit();
 
     const expectedMessage =
@@ -30,30 +16,10 @@ describe("Registration", () => {
     signup.modalContentShouldBe(expectedMessage);
   });
 
-  it("Incorrect CPF", () => {
-    var deliveryman = {
-      name: "Gustavo Ramos",
-      cpf: "09909911ABC",
-      email: "gustavo@hotmail.com",
-      whatsapp: "11999999999",
-      address: {
-        postalcode: "04534011",
-        street: "Rua Joaquim Floriano",
-        addressNumber: "1000",
-        complement: "Ap 142",
-        district: "Itaim Bibi",
-        city: "São Paulo/SP",
-      },
-      deliveryMethod: "Moto",
-      cnh: "images/cnh-digital.jpg",
-    };
-
-    var signup = new SignupPage();
-
+  it("Incorrect CPF", function () {
     signup.go();
-    signup.fillForm(deliveryman);
+    signup.fillForm(this.deliveryman.inv_cpf);
     signup.submit();
-
     signup.alertMessageShouldBe("Oops! CPF inválido");
   });
 });
