@@ -10,7 +10,7 @@ class SignupPage {
   }
 
   fillForm(deliveryman) {
-    cy.get('input[name="name"]').type(deliveryman.name);
+    cy.get('input[name="fullName"]').type(deliveryman.name);
     cy.get('input[name="cpf"]').type(deliveryman.cpf);
     cy.get('input[name="email"]').type(deliveryman.email);
     cy.get('input[name="whatsapp"]').type(deliveryman.whatsapp);
@@ -53,8 +53,9 @@ class SignupPage {
   }
 
   alertMessageShouldBe(expectedMessage) {
-    cy.get(".alert-error").should("have.text", expectedMessage);
+   // cy.get(".alert-error").should("have.text", expectedMessage);
+    cy.contains(".alert-error", expectedMessage).should("be.visible");
   }
 }
 
-export default new SignupPage;
+export default new SignupPage();

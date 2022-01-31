@@ -30,5 +30,21 @@
     },
     "deliveryMethod": "Moto",
     "cnh": "images/cnh-digital.jpg"
+  },
+  "inv_email": {
+    "name": "Will Doe",
+    "cpf": "09909911109",
+    "email": "johnhotmail.com",
+    "whatsapp": "11999999999",
+    "address": {
+      "postalcode": "04534011",
+      "street": "Rua Joaquim Floriano",
+      "addressNumber": "1000",
+      "complement": "Ap 142",
+      "district": "Itaim Bibi",
+      "city": "São Paulo/SP"
+    },
+    "deliveryMethod": "Moto",
+    "cnh": "images/cnh-digital.jpg"
   }
 }
